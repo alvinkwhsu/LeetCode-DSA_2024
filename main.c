@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+extern int execute_runningSum(void);
+extern int execute_maximumWealth(void);
 extern int* runningSum(int* nums, int numsSize, int* returnSize);
+extern int maximumWealth(int** accounts, int accountsSize, int* accountsColSize);
 
 /* =============================================================
 //
@@ -17,15 +20,18 @@ extern int* runningSum(int* nums, int numsSize, int* returnSize);
 // =============================================================*/
 int main(int argc, char const *argv[])
 {
-    int nums1[] = {1,2,3,4};
-    int nums2[] = {1,1,1,1,1};
-    int nums3[] = {3,1,2,10,1};
-    int *returnSize = NULL;
+    int test_no=1672;
 
-    int *array = runningSum(nums1, sizeof(nums1)/sizeof(int), returnSize);
-
-    free(array);
-
+    switch (test_no){
+        case 1480:
+            execute_runningSum();
+            break;
+        case 1672:
+            execute_maximumWealth();
+            break;
+        default:
+            printf("unknon test_no!\n");
+    }
 
     return 0;
 }

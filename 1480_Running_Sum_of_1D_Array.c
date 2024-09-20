@@ -56,3 +56,16 @@ int* runningSum(int* nums, int numsSize, int* returnSize) {
 
     return ret_nums;
 }
+
+int execute_runningSum(void) {
+    int nums1[] = {1,2,3,4};
+    int nums2[] = {1,1,1,1,1};
+    int nums3[] = {3,1,2,10,1};
+    int *returnSize = NULL;
+
+    int *array = runningSum(nums1, sizeof(nums1)/sizeof(int), returnSize);
+    if (array == NULL) return 1;
+    else free(array);
+
+    return 0;
+}
