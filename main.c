@@ -3,8 +3,10 @@
 
 extern int execute_runningSum(void);
 extern int execute_maximumWealth(void);
+extern int execute_numberOfSteps(void);
 extern int* runningSum(int* nums, int numsSize, int* returnSize);
 extern int maximumWealth(int** accounts, int accountsSize, int* accountsColSize);
+extern int numberOfSteps(int num);
 
 /* =============================================================
 //
@@ -20,7 +22,7 @@ extern int maximumWealth(int** accounts, int accountsSize, int* accountsColSize)
 // =============================================================*/
 int main(int argc, char const *argv[])
 {
-    int test_no=1672;
+    int test_no=1342;
 
     switch (test_no){
         case 1480:
@@ -28,6 +30,9 @@ int main(int argc, char const *argv[])
             break;
         case 1672:
             execute_maximumWealth();
+            break;
+        case 1342:
+            execute_numberOfSteps();
             break;
         default:
             printf("unknon test_no!\n");
